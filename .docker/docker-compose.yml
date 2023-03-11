@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  app: 
+    build: .
+    container_name: app
+    ports: 
+      - "8080:8000"
+    volumes:
+      - ../src:/app
+    tty: true
+  db:
+    image: mysql:8.0.32
+    platform: linux/amd64
+    container_name: db
+    ports:
+      - "3306:3306"
+    environment:
+      LANG: C.UTF-8
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: demo
+      TZ: "Asia/Tokyo"
