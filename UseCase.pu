@@ -60,7 +60,6 @@ object contract{
     メッセージ
     プランID
     ユーザーID
-    メンター募集ID
 }
 }
 package 承諾集約{
@@ -71,7 +70,7 @@ object agreement{
     プランID
     ユーザーID
     メンター募集ID
-    カテゴリID
+    List<タグID>
 }
 }
 package プラン集約{
