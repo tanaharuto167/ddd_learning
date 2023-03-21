@@ -70,7 +70,7 @@ object agreement{
     プランID
     ユーザーID
     メンター募集ID
-    List<タグID>
+    カテゴリID
 }
 }
 package プラン集約{
