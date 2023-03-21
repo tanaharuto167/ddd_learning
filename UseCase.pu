@@ -7,11 +7,13 @@ object user{
     パスワード
     年齢
     自己紹介
+    List<スキル>
+    List<経歴>
 }
 object skill{
     スキルID
     ユーザーID
-    タグID
+    List<タグID>
     評価
     年数
 }
@@ -23,9 +25,9 @@ object career{
     西暦to
 }
 }
-package メンター集約{
+package メンター募集集約{
 object mentor{
-    メンターID
+    メンター募集ID
     タイトル
     カテゴリーID
     契約タイプ
@@ -35,7 +37,7 @@ object mentor{
     予算
     応募期間
     ステータス
-    タグID
+    List<タグID>
 }
 }
 package 提案集約{
@@ -43,7 +45,7 @@ object opportunity{
     提案ID
     提案内容
     ユーザーID
-    メンターID
+    メンター募集ID
 }
 }
 package タグ集約{
@@ -58,7 +60,7 @@ object contract{
     メッセージ
     プランID
     ユーザーID
-    メンターID
+    メンター募集ID
 }
 }
 package 承諾集約{
@@ -68,7 +70,8 @@ object agreement{
     メッセージ
     プランID
     ユーザーID
-    メンターID
+    メンター募集ID
+    カテゴリID
 }
 }
 package プラン集約{
@@ -76,12 +79,13 @@ object plan{
     プランID
     タイトル
     カテゴリーID
-    タグID
+    List<タグID>
     内容
     ステータス
     相談形式
     金額
     相談方式
+    ユーザーID：作成者
 }
 }
 package カテゴリー集約{
